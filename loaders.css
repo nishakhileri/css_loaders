@@ -1,0 +1,201 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: black;
+}
+
+.spacer{
+    height: 125px;
+}
+
+.loader1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+.loader1 > div{
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-top: 5px solid black;
+    animation: spinner1 2s linear infinite;
+}
+
+@keyframes spinner1{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loader2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+
+.loader2 > div{
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    animation: spinner2 2s linear infinite;
+}
+
+@keyframes spinner2{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loader3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    gap: 5px;
+}
+
+.loader3 div{
+    background-color: white;
+    height: 100px;
+    width: 20px;
+}
+
+.loader3 .first{
+    animation: expander 2s linear 1s infinite;
+}
+
+.loader3 .second{
+    animation: expander 2s linear 1.5s infinite;
+}
+
+.loader3 .third{
+   animation: expander 2s linear 0s infinite; 
+}
+
+@keyframes expander{
+    0%{
+        height: 100px;
+    }
+
+    50%{
+        height: 150px;
+    }
+
+    100%{
+        height: 100px;
+    }
+}
+
+.loader4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+.loader4 > div{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid aquamarine;
+    animation: drop 2s linear infinite;
+}
+
+@keyframes drop{
+    0%{
+        width: 2rem;
+        height: 2rem;
+        border-color: aquamarine;
+        opacity: 0;
+    }
+
+    4%{
+        width: 2rem;
+        height: 2rem;
+        border-color: aquamarine;
+        opacity: 0;
+    }
+
+    5%{
+        width: 2rem;
+        height: 2rem;
+        border-color: rgb(152, 240, 211); 
+        opacity: 1;   
+    }
+
+    35%{
+        width: 2.8rem;
+        height: 2.8rem;
+        border-color:rgb(161, 220, 200) ; 
+        opacity: 0;   
+    }
+
+    50%{
+        width: 3rem;
+        height: 3rem;
+        border-color: rgb(162, 198, 186); 
+        opacity: 1;   
+    }
+
+    53%{
+        width: 3rem;
+        height: 3rem;
+        border-color: rgb(162, 198, 186); 
+        opacity: 1;   
+    }
+
+    54%{
+        width: 3rem;
+        height: 3rem;
+        border-color: rgb(197, 231, 219);   
+        opacity: 0; 
+    }
+
+    75%{
+        width: 3.8rem;
+        height: 3.8rem;
+        border-color: rgb(178, 195, 189);    
+        opacity: 1;
+    }
+
+    79%{
+        width: 3.8rem;
+        height: 3.8rem;
+        border-color: rgb(178, 195, 189);    
+        opacity: 1;
+    }
+
+    80%{
+        width: 3.8rem;
+        height: 3.8rem;
+        border-color: rgb(144, 235, 204);   
+        opacity: 0; 
+    }
+
+    100%{
+        width: 4rem;
+        height: 4rem;
+        border-color: rgb(142, 202, 182); 
+        opacity: 1;
+    }
+}
